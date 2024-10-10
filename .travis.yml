@@ -1,8 +1,4 @@
-sudo: required
-services:
- - docker
-before_install: 
- - docker build -t myimage .
-
-script: 
- -docker run myimage mvn clean install --coverage		
+language: java
+jdk:
+  - openjdk21
+script: ./mvnw clean install
