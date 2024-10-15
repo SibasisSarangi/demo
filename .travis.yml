@@ -6,7 +6,8 @@ before_install:
 #- mvn clean
 - echo "$DOCKER_PASSWORD" | docker login  -u "$DOCKER_USERNAME" --password-stdin
 #- docker pull alpine/java:21-jdk
-- docker build -t sibasissarangi/hello-world .
+- docker pull sibasissarangi/hello-world:latest
+#- docker build -t sibasissarangi/hello-world .
 script:
 #We avoid this error :" the job exceeded the maximum log length and has been terminated "
 #- cp .travis.settings.xml $HOME/.m2/settings.xml
