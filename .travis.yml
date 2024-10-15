@@ -13,4 +13,4 @@ script:
 #- cp .travis.settings.xml $HOME/.m2/settings.xml
 # - cat $HOME/.m2/settings.xml
 #deploying the app on Docker
-- docker run sibasissarangi/hello-world -- -- coverage
+- docker run sibasissarangi/hello-world
