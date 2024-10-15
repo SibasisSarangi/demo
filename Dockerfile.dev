@@ -1,0 +1,10 @@
+FROM node:16-alpine
+
+WORKDIR '/app'
+
+COPY pom.xml .
+RUN mvn clean install
+
+COPY . .
+
+CMD ["mvn", "spring-boot", "run"]
